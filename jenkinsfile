@@ -1,0 +1,29 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('dev') {
+            steps {
+                echo 'Application is building'
+            }
+        }
+         stages {
+        stage('Testing') {
+            steps {
+                echo 'Atutomation testing'
+            }
+        }
+         stages {
+        stage('UAT') {
+            steps {
+                echo 'waiting for UAT'
+            }
+        }
+         stages {
+        stage('release') {
+            steps {
+                echo 'Application is ready to release to product server'
+            }
+        }
+    }
+}
